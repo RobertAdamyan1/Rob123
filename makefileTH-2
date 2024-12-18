@@ -1,0 +1,18 @@
+
+SRC = demo_application.cpp
+OUT = demo-application
+
+CXX = g++
+CXXFLAGS = -std=c++17 -pthread -Wall
+
+all: $(OUT)
+
+$(OUT): $(SRC)
+	$(CXX) $(CXXFLAGS) -o $(OUT) $(SRC)
+
+clean:
+	rm -f $(OUT)
+
+rebuild: clean all
+
+.PHONY: all clean rebuild
