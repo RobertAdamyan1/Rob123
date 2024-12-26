@@ -1,12 +1,12 @@
 
 CXX = g++
-CXXFLAGS = -std=c++11 -Wall -g
-TARGET = prime-calculator
+CXXFLAGS = -Wall -std=c++11
+TARGET = signal-echo
 
 all: $(TARGET)
 
-$(TARGET): prime-calculator.cpp
-	$(CXX) $(CXXFLAGS) -o $(TARGET) prime-calculator.cpp
+$(TARGET): main.cpp
+	$(CXX) $(CXXFLAGS) -o $(TARGET) main.cpp
 
 clean:
 	rm -f $(TARGET)
